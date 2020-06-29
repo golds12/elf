@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // Import Database Connection Class file 
-import db.DatabaseConnection;
+import tools.DB;
 
 // Servlet Name 
 @WebServlet("/insertUser")
@@ -25,7 +25,7 @@ public class insertUser extends HttpServlet {
         try {
 
             // Initialize the database 
-            Connection con = DatabaseConnection.initializeDatabase();
+            Connection con = DB.initializeDatabase();
 
             // Create a SQL query to insert data into demo table 
             // demo table consists of two columns, so two '?' is used 
